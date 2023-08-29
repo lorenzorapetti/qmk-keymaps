@@ -1,0 +1,34 @@
+layout:
+  qmk_keyboard: splitkb/aurora/sweep/rev1
+layers:
+  Base:
+    - [Q, W, F, P, B, J, L, U, Y, "'"]
+    - [A, R, S, T, G, M, N, E, I, O]
+    - [
+        { t: Z, h: Ctrl },
+        { t: X, h: Alt },
+        { t: C, h: Meta },
+        { t: D, h: Shift },
+        V,
+        K,
+        { t: H, h: Shift },
+        { t: ',', h: Meta, s: '<' },
+        { t: ., h: Alt, s: '>' },
+        { t: /, h: Ctrl, s: '?' },
+      ]
+    - [Bckspc, { t: Space, h: Nav }, { t: Enter, h: Sym }, { t: Esc, h: Num }]
+  Sym:
+    - ['`', '~', '{', '}', '@', '', '-', '_', '|', '']
+    - ['$', '&', '(', ')', '#', '', ';', ':', "\\", '']
+    - ['<', '>', '[', ']', '%', '', '=', '+', '*', '!']
+    - ['', '', { type: held }, '']
+  Num:
+    - ['/', 7, 8, 9, '*', '', '', '', '', '']
+    - ['', 4, 5, 6, '-', '', '', '', '', '']
+    - ['', 1, 2, 3, '+', '', '', '', '', '']
+    - [0, '=', '', { type: held }]
+  Nav:
+    - [Tab, '', '', '', '', Redo, Paste, Copy, Cut, Undo]
+    - ['', '', '', '', '', '←', '↓', '↑', '→', CpsLck]
+    - [Ctrl, Alt, Meta, Shift, '', '', Home, PgDown, PgUp, End]
+    - [{ type: held }, '', Enter, Del]
