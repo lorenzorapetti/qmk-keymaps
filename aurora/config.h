@@ -17,7 +17,7 @@
 #pragma once
 
 // default but used in macros
-#define TAPPING_TERM 175
+#define TAPPING_TERM 150
 #define PERMISSIVE_HOLD
 
 // Not yet available in `keymap.json` format
