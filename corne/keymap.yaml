@@ -7,12 +7,12 @@ layers:
     - ['Tab', 'Q', 'W', 'F', 'P', 'B', 'J', 'L', 'U', 'Y', ':', "\\"]
     - ['Bspc', 'A', 'R', 'S', 'T', 'G', 'M', 'N', 'E', 'I', 'O', "'"]
     - ['LShft', 'Z', 'X', 'C', 'D', 'V', 'K', 'H', ',', '.', '/', 'Esc']
-    - ['LGui', 'SYM', { t: 'Space', h: 'NAV' }, { t: 'Enter', h: 'YABAI' }, 'NUM', 'RGui']
+    - ['UNI', 'SYM', { t: 'Space', h: 'NAV' }, { t: 'Enter', h: 'YABAI' }, 'NUM', 'RGui']
   QUERTY:
     - ['Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', "\\"]
     - ['Bspc', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', "'"]
     - ['LShft', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', 'Esc']
-    - ['LGui', 'SYM', { t: 'Space', h: 'NAV' }, { t: 'Enter', h: 'YABAI' }, 'NUM', 'RGui']
+    - ['UNI', 'SYM', { t: 'Space', h: 'NAV' }, { t: 'Enter', h: 'YABAI' }, 'NUM', 'RGui']
   NUMBER:
     - [null, null, '7', '8', '9', null, null, null, null, null, null, null]
     - [null, null, '4', '5', '6', null, 'F7', 'F8', 'F9', 'F10', 'F11', 'F12']
@@ -77,3 +77,39 @@ layers:
     - [null, null, '⏮️', '⏯️', '⏭️', '🔆', null, null, null, null, null, null]
     - [null, null, '🔇', '🔉', '🔊', '🔅', null, null, null, null, null, { type: held }]
     - [null, null, null, null, null, null]
+  UNICODE:
+    - [null, null, null, null, null, null, null, null, null, null, null, null]
+    - [null, 'à', null, null, null, null, null, 'é', 'è', 'ì', 'ò', null]
+    - [null, 'À', null, null, null, null, null, 'É', 'È', 'Ì', 'Ò', null]
+    - [{ type: held }, null, null, null, null, null]
+  KEYBORD_FUNCTION:
+    - [
+        'Boot',
+        null,
+        null,
+        'RGB Sat -',
+        'RGB Sat +',
+        'RGB Bright +',
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+      ]
+    - [
+        null,
+        null,
+        null,
+        'RGB Hud -',
+        'RGB Hud +',
+        'RGB Bright -',
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+      ]
+    - [null, null, null, 'RGB Mod -', 'RGB Mod +', 'RGB Tog', null, null, null, null, null, null]
+    - [null, { type: held }, null, null, { type: held }, null]

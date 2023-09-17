@@ -125,8 +125,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_NUM] = LAYOUT(
 		_______,   _______,   KC_7,      KC_8,      KC_9,      _______,                 _______,   _______,   _______,   _______,   _______,   _______,
 		_______,   _______,   KC_4,      KC_5,      KC_6,      _______,             		KC_F7,     KC_F8,     KC_F9,     KC_F10,    KC_F11,    KC_F12,
-		_______,   _______,   KC_1,      KC_2,      KC_3,      KC_EQL,                  KC_F1,     KC_F2,     KC_F3,     KC_F4,     KC_F5,     KC_F6,
-																	   KC_0,      KC_DOT,    _______,     					  _______,   _______, 	_______
+		_______,   KC_0,      KC_1,      KC_2,      KC_3,      KC_EQL,                  KC_F1,     KC_F2,     KC_F3,     KC_F4,     KC_F5,     KC_F6,
+																	   KC_DOT,    _______,   _______,     					  _______,   _______, 	_______
 	),
 
 	[_SYM] = LAYOUT(
@@ -147,7 +147,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		XXXXXXX,   DSP_LEFT,    SPC_7,     SPC_8,     SPC_9,    DSP_RIGHT,              MV_LEFT,   MV_DOWN,   MV_UP,    MV_RIGHT,   XXXXXXX,   XXXXXXX,
 		XXXXXXX,   FSP_LEFT,    SPC_4,     SPC_5,     SPC_6,    FSP_RIGHT,           		FC_LEFT,   FC_DOWN,   FC_UP,    FC_RIGHT,   XXXXXXX,   XXXXXXX,
 		XXXXXXX,   SPC_0,       SPC_1,     SPC_2,     SPC_3,    MAX_WIN,                SW_LEFT,   SW_DOWN,   SW_UP,    SW_RIGHT,   XXXXXXX,   KC_LSFT,
-																	    XXXXXXX,   XXXXXXX,   XXXXXXX,     					  _______,   XXXXXXX, 	XXXXXXX
+																	    _______,   _______,   _______,     					  _______,   _______, 	_______
 	),
 
 	[_MEDIA] = LAYOUT(
@@ -162,6 +162,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		_______,   A_GRAVE,      _______,   _______,   _______,   _______,             		_______,   E_ACUTE,      E_GRAVE,      I_GRAVE,      O_GRAVE,   _______,
 		_______,   A_GRAVE_UP,   _______,   _______,   _______,   _______,                _______,   E_ACUTE_UP,   E_GRAVE_UP,   I_GRAVE_UP, 	 O_GRAVE_UP,   _______,
 																	      _______,   _______,   _______,     					  _______,   _______, 	   _______
+	),
+
+	[_KB_FN] = LAYOUT(
+		QK_BOOT,   _______,   _______,   RGB_SAD,    RGB_SAI,   RGB_VAI,                _______,   _______,   _______,   _______,   _______,   _______,
+		_______,   _______,   _______,   RGB_HUD,    RGB_HUI,   RGB_VAD,             		_______,   _______,   _______,   _______,   _______,   _______,
+		_______,   _______,   _______,   RGB_RMOD,   RGB_MOD,   RGB_TOG,                _______,   _______,   _______,   _______, 	_______,   _______,
+																	   _______,    _______,   _______,     					  _______,   _______, 	_______
 	)
 
 	// Template for adding new layers
@@ -227,6 +234,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	}
 
 	return true;
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+   return update_tri_layer_state(state, _NUM, _SYM, _KB_FN);
 }
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
