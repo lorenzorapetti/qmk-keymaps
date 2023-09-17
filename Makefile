@@ -1,7 +1,9 @@
 USER = lorenzorapetti
 
-KEYBOARDS = aurora
+KEYBOARDS = aurora kyria corne
 PATH_aurora = splitkb/aurora/sweep
+PATH_kyria = splitkb/kyria
+PATH_corne = splitkb/aurora/corne
 
 all: $(KEYBOARDS)
 

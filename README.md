@@ -6,6 +6,7 @@ I took the design of the repo from [this article](https://medium.com/@patrick.el
 ## Keyboards
 
 - Aurora Sweep
+- Kyria rev3
 
 ## Building Keymap
 
@@ -23,5 +24,4 @@ make aurora
 
 ## TODO
 
-- Kyria rev3 build
 - Chocofi build

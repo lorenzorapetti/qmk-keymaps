@@ -1,0 +1,79 @@
+# parsed and then tweaked from https://github.com/LOWPROKB/zmk-config-zen-2/blob/main/config/corneish_zen.keymap
+layout:
+  qmk_keyboard: corne_rotated
+  qmk_layout: LAYOUT_split_3x6_3
+layers:
+  COLEMAK:
+    - ['Tab', 'Q', 'W', 'F', 'P', 'B', 'J', 'L', 'U', 'Y', ':', "\\"]
+    - ['Bspc', 'A', 'R', 'S', 'T', 'G', 'M', 'N', 'E', 'I', 'O', "'"]
+    - ['LShft', 'Z', 'X', 'C', 'D', 'V', 'K', 'H', ',', '.', '/', 'Esc']
+    - ['LGui', 'SYM', { t: 'Space', h: 'NAV' }, { t: 'Enter', h: 'YABAI' }, 'NUM', 'RGui']
+  QUERTY:
+    - ['Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', "\\"]
+    - ['Bspc', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', "'"]
+    - ['LShft', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', 'Esc']
+    - ['LGui', 'SYM', { t: 'Space', h: 'NAV' }, { t: 'Enter', h: 'YABAI' }, 'NUM', 'RGui']
+  NUMBER:
+    - [null, null, '7', '8', '9', null, null, null, null, null, null, null]
+    - [null, null, '4', '5', '6', null, 'F7', 'F8', 'F9', 'F10', 'F11', 'F12']
+    - [null, null, '1', '2', '3', '=', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6']
+    - ['0', '.', null, null, { type: held }, null]
+  SYMBOL:
+    - ['`', '!', '@', '{', '}', null, null, '+', '*', '/', null, null]
+    - ['~', '%', '#', '(', ')', null, null, ':', ';', '|', null, null]
+    - [null, '^', '$', '[', ']', null, null, '=', '-', '_', "\\", null]
+    - [null, { type: held }, null, null, null, null]
+  NAVIGATION:
+    - [null, null, null, null, null, null, 'Home', 'PgDown', 'PgUp', 'End', null, null]
+    - [null, null, null, null, null, null, '←', '↓', '↑', '→', null, null]
+    - [null, null, null, null, null, null, null, null, null, null, null, 'LShift']
+    - [null, null, { type: held }, null, null, null]
+  YABAI:
+    - [
+        null,
+        'Move Disp ←',
+        'Space 7',
+        'Space 8',
+        'Space 9',
+        'Move Disp →',
+        'Move ←',
+        'Move ↓',
+        'Move ↑',
+        'Move →',
+        null,
+        null,
+      ]
+    - [
+        null,
+        'Focus Disp ←',
+        'Space 4',
+        'Space 5',
+        'Space 6',
+        'Focus Disp →',
+        'Focus ←',
+        'Focus ↓',
+        'Focus ↑',
+        'Focus →',
+        null,
+        null,
+      ]
+    - [
+        null,
+        'Space 0',
+        'Space 1',
+        'Space 2',
+        'Space 3',
+        'Max Win',
+        'Swap ←',
+        'Swap ↓',
+        'Swap ↑',
+        'Swap →',
+        null,
+        'LShift',
+      ]
+    - [null, null, null, { type: held }, null, null]
+  MEDIA:
+    - [null, null, null, null, null, null, null, null, null, null, null, null]
+    - [null, null, '⏮️', '⏯️', '⏭️', '🔆', null, null, null, null, null, null]
+    - [null, null, '🔇', '🔉', '🔊', '🔅', null, null, null, null, null, { type: held }]
+    - [null, null, null, null, null, null]
